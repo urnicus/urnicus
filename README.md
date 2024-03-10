@@ -1,3 +1,3 @@
 ## Welcome to Urnicus
 
-Symmetry Symmie
+Gusto Gustie
