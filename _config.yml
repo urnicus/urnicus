@@ -1,4 +1,7 @@
-theme: jekyll-theme-minimal
-logo: https://beotus.com/api/v1/download?item_part_nbr=HAMSTER&position=1&variant=high
-title: [Urnicus Inc.]
-description: [A landing page of sorts...]
+theme: jekyll-theme-cayman
+title: Urnicus Inc.
+description: Voter Data Access Guide
+
+# Blog configuration
+future: true
+permalink: /blog/:year/:month/:day/:title.html
