@@ -148,7 +148,7 @@ Then visit [http://localhost:4000](http://localhost:4000) in your browser.
 
 ## Deployment
 
-Changes are automatically deployed to GitHub Pages when pushed to the `master` branch:
+Changes are automatically deployed to GitHub Pages when pushed to the `main` branch:
 
 ```bash
 git add .
