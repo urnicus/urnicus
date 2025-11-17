@@ -11,15 +11,19 @@ This is a Jekyll-based blog hosted on GitHub Pages that provides state-by-state 
 
 ```
 urnicus/
-├── _config.yml           # Jekyll configuration
-├── _layouts/             # Custom layouts
-│   └── post.html        # Blog post layout template
-├── _posts/              # Blog posts (Markdown files)
-│   └── 2025-11-17-pennsylvania-voter-data.md
-├── blog.md              # Blog index page (lists all posts)
-├── README.md            # Project README
-├── Gemfile              # Ruby dependencies
-└── claude.md            # This file - project documentation for Claude
+├── _config.yml              # Jekyll configuration
+├── _layouts/                # Custom layouts
+│   └── post.html           # Blog post layout template
+├── _posts/                 # Blog posts (Markdown files) - 50 state posts
+│   ├── 2025-11-17-alabama-voter-data.md
+│   ├── 2025-11-17-alaska-voter-data.md
+│   ├── ... (all 50 states)
+│   └── 2025-11-17-wyoming-voter-data.md
+├── blog.md                 # Blog index page (lists all posts)
+├── states-overview.md      # Overview page with sortable table and categories
+├── README.md               # Project README
+├── Gemfile                 # Ruby dependencies
+└── CLAUDE.md               # This file - project documentation for Claude
 ```
 
 ## Theme
@@ -78,63 +82,59 @@ Each state blog post should follow this structure:
 
 ## States Completed
 
-- [x] Pennsylvania (2025-11-17)
+All 50 states have been completed as of November 17, 2025:
 
-## States Remaining (49)
+- [x] Alabama
+- [x] Alaska
+- [x] Arizona
+- [x] Arkansas
+- [x] California
+- [x] Colorado
+- [x] Connecticut
+- [x] Delaware
+- [x] Florida (Tested)
+- [x] Georgia (Tested)
+- [x] Hawaii
+- [x] Idaho
+- [x] Illinois
+- [x] Indiana
+- [x] Iowa
+- [x] Kansas
+- [x] Kentucky
+- [x] Louisiana
+- [x] Maine
+- [x] Maryland
+- [x] Massachusetts
+- [x] Michigan
+- [x] Minnesota
+- [x] Mississippi (Submitted for testing)
+- [x] Missouri
+- [x] Montana
+- [x] Nebraska
+- [x] Nevada
+- [x] New Hampshire
+- [x] New Jersey
+- [x] New Mexico
+- [x] New York
+- [x] North Carolina (Tested)
+- [x] Ohio (Tested)
+- [x] Oklahoma
+- [x] Oregon
+- [x] Pennsylvania (Tested)
+- [x] Rhode Island
+- [x] South Carolina
+- [x] South Dakota
+- [x] Tennessee
+- [x] Texas
+- [x] Utah
+- [x] Vermont
+- [x] Virginia
+- [x] Washington (Tested)
+- [x] West Virginia
+- [x] Wisconsin
+- [x] Wyoming
 
-### States with Research Data Available
-
-The following states have been researched and data is available in the source document:
-
-- [ ] Alabama
-- [ ] Alaska
-- [ ] Arizona
-- [ ] Arkansas
-- [ ] California
-- [ ] Colorado
-- [ ] Connecticut
-- [ ] Delaware
-- [ ] Florida
-- [ ] Georgia
-- [ ] Hawaii
-- [ ] Idaho
-- [ ] Illinois
-- [ ] Indiana
-- [ ] Iowa
-- [ ] Kansas
-- [ ] Kentucky
-- [ ] Louisiana
-- [ ] Maine
-- [ ] Maryland
-- [ ] Massachusetts
-- [ ] Michigan
-- [ ] Minnesota
-- [ ] Mississippi
-- [ ] Missouri
-- [ ] Montana
-- [ ] Nebraska
-- [ ] Nevada
-- [ ] New Hampshire
-- [ ] New Jersey
-- [ ] New Mexico
-- [ ] New York
-- [ ] North Carolina
-- [ ] North Dakota
-- [ ] Ohio
-- [ ] Oklahoma
-- [ ] Oregon
-- [ ] Rhode Island
-- [ ] South Carolina
-- [ ] South Dakota
-- [ ] Tennessee
-- [ ] Texas
-- [ ] Utah
-- [ ] Vermont
-- [ ] Virginia
-- [ ] Washington
-- [ ] West Virginia
-- [ ] Wisconsin
-- [ ] Wyoming
+**Note:** North Dakota was not included as it does not have voter registration (same-day registration state)
 
 ## Local Development
 
@@ -168,15 +168,33 @@ All state research data is available in the original research document provided 
 - Testing status
 - Direct links to request forms/portals
 
-## Next Steps for Content Creation
+## States Overview Page
 
-To create the remaining 49 blog posts:
+**Location**: `/states-overview.html` (from `states-overview.md`)
 
-1. Use the Pennsylvania post as a template
-2. Extract data from the research document for each state
-3. Follow the established blog post structure
-4. Create one post per state with filename: `YYYY-MM-DD-state-name-voter-data.md`
-5. Place all posts in the `_posts/` directory
+A comprehensive landing page featuring:
+- **Sortable Table**: Click column headers to sort by State, Cost, Effort, or Tested status
+- **Categorized Sections**: States grouped by access type and cost
+  - Tested & Verified (6 states)
+  - Free & Unrestricted Access (7 states)
+  - Extremely Low Cost $0-$50 (9 states)
+  - Free/Low Cost with Eligibility Requirements (3 states)
+  - Moderate Cost $100-$500 (14 states)
+  - Higher Cost $1,000-$5,000 (11 states)
+  - Very High Cost or Complex $5,000+ (6 states)
+- **Key Insights**: Best values, fastest access, best voter history coverage
+- **Practical Guidance**: Recommendations for different user types
+
+## Content Statistics
+
+- **Total States**: 50 (49 + Pennsylvania original)
+- **Total Blog Posts**: 50
+- **States Tested**: 6 (Ohio, North Carolina, Pennsylvania, Florida, Georgia, Washington)
+- **States Pending Test**: 1 (Mississippi - form submitted)
+- **Free Access States**: 7 (Ohio, North Carolina, Florida, Mississippi, Vermont, Washington, New York)
+- **Lowest Cost**: Arkansas ($2.50)
+- **Highest Cost**: Alabama (~$37,000)
+- **Most Complex**: Massachusetts (no statewide list - 351 municipalities)
 
 ## Key Design Decisions
 
@@ -190,3 +208,51 @@ To create the remaining 49 blog posts:
 - Jekyll only reads `_config.yml` at startup - server must be restarted after configuration changes
 - Posts must not have future dates (relative to server time) unless `future: true` is set in config
 - The `github-pages` gem in the Gemfile ensures compatibility with GitHub Pages deployment
+
+## Navigation Structure
+
+The site has three main content areas:
+
+1. **Individual State Blog Posts** (`_posts/` directory)
+   - One detailed post per state (50 total)
+   - URL format: `/blog/2025/11/17/[state-name]-voter-data.html`
+   - Each follows the standard blog post structure outlined above
+
+2. **Blog Index** (`blog.md`)
+   - Lists all state blog posts
+   - URL: `/blog/`
+
+3. **States Overview Page** (`states-overview.md`)
+   - Sortable table comparing all 50 states
+   - States organized by cost and accessibility categories
+   - Quick reference for decision-making
+   - URL: `/states-overview.html`
+   - This is the recommended landing page for users wanting to compare states
+
+## Future Maintenance
+
+### Regular Updates Needed
+- **Cost verification**: Prices may change; verify periodically with state offices
+- **Process changes**: States may update request procedures, forms, or portals
+- **Testing status**: Update as more states are tested
+- **New legislation**: Monitor for law changes affecting voter data access
+
+### Potential Additions
+- Add "Last Verified" dates to each state page
+- Include sample request letters/forms
+- Add state-by-state legal restrictions comparisons
+- Document voter history field structures for each state
+- Add delivery timeline tracking (actual vs. estimated)
+
+### SEO Considerations
+- Each state page targets: "[State] voter data", "[State] voter list", "[State] voter history"
+- Overview page targets: "voter data by state", "how to get voter lists"
+- Consider adding FAQ page for common questions
+- Add state maps/visualizations showing cost tiers
+
+## Quick Links for User
+
+- **Blog Index**: `/blog/`
+- **States Overview**: `/states-overview.html`
+- **Individual State**: `/blog/2025/11/17/[state-name]-voter-data.html`
+- **Example**: `/blog/2025/11/17/ohio-voter-data.html`
