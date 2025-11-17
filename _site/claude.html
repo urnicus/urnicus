@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Urnicus Voter Data Blog - Project Documentation | Urnicus Inc.</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Urnicus Voter Data Blog - Project Documentation" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Voter Data Access Guide" />
+<meta property="og:description" content="Voter Data Access Guide" />
+<link rel="canonical" href="http://localhost:4000/claude" />
+<meta property="og:url" content="http://localhost:4000/claude" />
+<meta property="og:site_name" content="Urnicus Inc." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Urnicus Voter Data Blog - Project Documentation" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Voter Data Access Guide","headline":"Urnicus Voter Data Blog - Project Documentation","url":"http://localhost:4000/claude"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=c73ac5a3398c4bc43d69788f574c6fae3a07ea41">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">Urnicus Voter Data Blog - Project Documentation</h1>
+      <h2 class="project-tagline">Voter Data Access Guide</h2>
+      
+        <a href="https://github.com/urnicus/urnicus" class="btn">View on GitHub</a>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <h1 id="urnicus-voter-data-blog---project-documentation">Urnicus Voter Data Blog - Project Documentation</h1>
+
+<h2 id="project-overview">Project Overview</h2>
+
+<p>This is a Jekyll-based blog hosted on GitHub Pages that provides state-by-state information on how to obtain voter registration lists and voter history data across the United States.</p>
+
+<p><strong>Live URL</strong>: https://urnicus.com/
+<strong>Blog URL</strong>: https://urnicus.com/blog/</p>
+
+<h2 id="project-structure">Project Structure</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>urnicus/
+├── _config.yml              # Jekyll configuration
+├── _layouts/                # Custom layouts
+│   └── post.html           # Blog post layout template
+├── _posts/                 # Blog posts (Markdown files) - 50 state posts
+│   ├── 2025-11-17-alabama-voter-data.md
+│   ├── 2025-11-17-alaska-voter-data.md
+│   ├── ... (all 50 states)
+│   └── 2025-11-17-wyoming-voter-data.md
+├── blog.md                 # Blog index page (lists all posts)
+├── states-overview.md      # Overview page with sortable table and categories
+├── README.md               # Project README
+├── Gemfile                 # Ruby dependencies
+└── CLAUDE.md               # This file - project documentation for Claude
+</code></pre></div></div>
+
+<h2 id="theme">Theme</h2>
+
+<p><strong>Current Theme</strong>: <code class="language-plaintext highlighter-rouge">jekyll-theme-cayman</code></p>
+
+<p>The Cayman theme provides a clean, centered layout that works well for blog content. Previously used <code class="language-plaintext highlighter-rouge">jekyll-theme-minimal</code> which had sidebar formatting issues with blog posts.</p>
+
+<h2 id="configuration-details">Configuration Details</h2>
+
+<h3 id="_configyml-settings">_config.yml Settings</h3>
+
+<ul>
+  <li><strong>Theme</strong>: <code class="language-plaintext highlighter-rouge">jekyll-theme-cayman</code></li>
+  <li><strong>Title</strong>: <code class="language-plaintext highlighter-rouge">Urnicus Inc.</code></li>
+  <li><strong>Description</strong>: <code class="language-plaintext highlighter-rouge">Voter Data Access Guide</code></li>
+  <li><strong>Future Posts</strong>: <code class="language-plaintext highlighter-rouge">future: true</code> (allows posts with today’s/future dates to display)</li>
+  <li><strong>Permalink Structure</strong>: <code class="language-plaintext highlighter-rouge">/blog/:year/:month/:day/:title.html</code></li>
+</ul>
+
+<h3 id="blog-post-format">Blog Post Format</h3>
+
+<p>All blog posts must follow this naming convention:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>YYYY-MM-DD-state-name-voter-data.md
+</code></pre></div></div>
+
+<p>Example: <code class="language-plaintext highlighter-rouge">2025-11-17-pennsylvania-voter-data.md</code></p>
+
+<h3 id="blog-post-template-front-matter">Blog Post Template (Front Matter)</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">How</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">Get</span><span class="nv"> </span><span class="s">Voter</span><span class="nv"> </span><span class="s">Data</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">[State</span><span class="nv"> </span><span class="s">Name]"</span>
+<span class="na">date</span><span class="pi">:</span> <span class="s">YYYY-MM-DD</span>
+<span class="na">tags</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">state-name</span><span class="pi">,</span> <span class="nv">voter-data</span><span class="pi">,</span> <span class="nv">voter-list</span><span class="pi">,</span> <span class="nv">voter-history</span><span class="pi">]</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<h2 id="blog-post-structure">Blog Post Structure</h2>
+
+<p>Each state blog post should follow this structure:</p>
+
+<ol>
+  <li><strong>Introduction</strong> - Brief overview of the state’s voter data accessibility</li>
+  <li><strong>Quick Summary Table</strong> - Key facts including:
+    <ul>
+      <li>Statewide Cost</li>
+      <li>Voter List Access</li>
+      <li>Voter History Access</li>
+      <li>Delivery Method</li>
+      <li>Processing Time</li>
+    </ul>
+  </li>
+  <li><strong>Voter List Section</strong> - How to access, what’s included, step-by-step instructions</li>
+  <li><strong>Voter History Section</strong> - Historical coverage, what’s included</li>
+  <li><strong>Cost Section</strong> - Detailed pricing information</li>
+  <li><strong>Restrictions and Permitted Uses</strong> - Legal requirements (use blockquotes for important restrictions)</li>
+  <li><strong>Technical Notes</strong> (if applicable) - Browser compatibility, file formats, etc.</li>
+  <li><strong>Additional Resources</strong> - Links to official documentation</li>
+</ol>
+
+<h2 id="states-completed">States Completed</h2>
+
+<p>All 50 states have been completed as of November 17, 2025:</p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Alabama</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Alaska</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Arizona</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Arkansas</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />California</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Colorado</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Connecticut</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Delaware</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Florida (Tested)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Georgia (Tested)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Hawaii</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Idaho</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Illinois</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Indiana</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Iowa</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Kansas</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Kentucky</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Louisiana</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Maine</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Maryland</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Massachusetts</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Michigan</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Minnesota</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Mississippi (Submitted for testing)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Missouri</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Montana</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Nebraska</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Nevada</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />New Hampshire</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />New Jersey</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />New Mexico</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />New York</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />North Carolina (Tested)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Ohio (Tested)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Oklahoma</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Oregon</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Pennsylvania (Tested)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Rhode Island</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />South Carolina</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />South Dakota</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Tennessee</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Texas</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Utah</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Vermont</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Virginia</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Washington (Tested)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />West Virginia</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Wisconsin</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Wyoming</li>
+</ul>
+
+<p><strong>Note:</strong> North Dakota was not included as it does not have voter registration (same-day registration state)</p>
+
+<h2 id="local-development">Local Development</h2>
+
+<p>To run the site locally:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">exec </span>jekyll serve
+</code></pre></div></div>
+
+<p>Then visit <a href="http://localhost:4000">http://localhost:4000</a> in your browser.</p>
+
+<h2 id="deployment">Deployment</h2>
+
+<p>Changes are automatically deployed to GitHub Pages when pushed to the <code class="language-plaintext highlighter-rouge">main</code> branch:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span>
+git commit <span class="nt">-m</span> <span class="s2">"Your commit message"</span>
+git push
+</code></pre></div></div>
+
+<p>GitHub Pages will build and deploy the site automatically (usually within 1-2 minutes).</p>
+
+<h2 id="source-data">Source Data</h2>
+
+<p>All state research data is available in the original research document provided by the user. Each state entry includes:</p>
+<ul>
+  <li>Voter List access method</li>
+  <li>Voter History access method</li>
+  <li>Cost information</li>
+  <li>Restrictions on use</li>
+  <li>Testing status</li>
+  <li>Direct links to request forms/portals</li>
+</ul>
+
+<h2 id="states-overview-page">States Overview Page</h2>
+
+<p><strong>Location</strong>: <code class="language-plaintext highlighter-rouge">/states-overview.html</code> (from <code class="language-plaintext highlighter-rouge">states-overview.md</code>)</p>
+
+<p>A comprehensive landing page featuring:</p>
+<ul>
+  <li><strong>Sortable Table</strong>: Click column headers to sort by State, Cost, Effort, or Tested status</li>
+  <li><strong>Categorized Sections</strong>: States grouped by access type and cost
+    <ul>
+      <li>Tested &amp; Verified (6 states)</li>
+      <li>Free &amp; Unrestricted Access (7 states)</li>
+      <li>Extremely Low Cost $0-$50 (9 states)</li>
+      <li>Free/Low Cost with Eligibility Requirements (3 states)</li>
+      <li>Moderate Cost $100-$500 (14 states)</li>
+      <li>Higher Cost $1,000-$5,000 (11 states)</li>
+      <li>Very High Cost or Complex $5,000+ (6 states)</li>
+    </ul>
+  </li>
+  <li><strong>Key Insights</strong>: Best values, fastest access, best voter history coverage</li>
+  <li><strong>Practical Guidance</strong>: Recommendations for different user types</li>
+</ul>
+
+<h2 id="content-statistics">Content Statistics</h2>
+
+<ul>
+  <li><strong>Total States</strong>: 50 (49 + Pennsylvania original)</li>
+  <li><strong>Total Blog Posts</strong>: 50</li>
+  <li><strong>States Tested</strong>: 6 (Ohio, North Carolina, Pennsylvania, Florida, Georgia, Washington)</li>
+  <li><strong>States Pending Test</strong>: 1 (Mississippi - form submitted)</li>
+  <li><strong>Free Access States</strong>: 7 (Ohio, North Carolina, Florida, Mississippi, Vermont, Washington, New York)</li>
+  <li><strong>Lowest Cost</strong>: Arkansas ($2.50)</li>
+  <li><strong>Highest Cost</strong>: Alabama (~$37,000)</li>
+  <li><strong>Most Complex</strong>: Massachusetts (no statewide list - 351 municipalities)</li>
+</ul>
+
+<h2 id="key-design-decisions">Key Design Decisions</h2>
+
+<ul>
+  <li><strong>Theme Choice</strong>: Cayman theme selected for clean, centered layout suitable for long-form blog content</li>
+  <li><strong>Permalink Structure</strong>: Posts organized under <code class="language-plaintext highlighter-rouge">/blog/</code> path to keep blog content separate from potential other pages</li>
+  <li><strong>Future Posts Enabled</strong>: Allows posts dated today or in the future to display immediately</li>
+  <li><strong>Post Layout</strong>: Custom <code class="language-plaintext highlighter-rouge">_layouts/post.html</code> created with styling for tables, blockquotes, and navigation back to blog index</li>
+</ul>
+
+<h2 id="important-notes">Important Notes</h2>
+
+<ul>
+  <li>Jekyll only reads <code class="language-plaintext highlighter-rouge">_config.yml</code> at startup - server must be restarted after configuration changes</li>
+  <li>Posts must not have future dates (relative to server time) unless <code class="language-plaintext highlighter-rouge">future: true</code> is set in config</li>
+  <li>The <code class="language-plaintext highlighter-rouge">github-pages</code> gem in the Gemfile ensures compatibility with GitHub Pages deployment</li>
+</ul>
+
+<h2 id="notable-state-characteristics">Notable State Characteristics</h2>
+
+<h3 id="free-access-states">Free Access States</h3>
+<p>Best for initial research and testing:</p>
+<ul>
+  <li><strong>Ohio</strong>: Instant FTP download, easiest access</li>
+  <li><strong>North Carolina</strong>: Weekly updates, 10-year voter history</li>
+  <li><strong>Pennsylvania</strong>: 40 elections of voter history (most comprehensive)</li>
+  <li><strong>Washington</strong>: Email link in minutes, very fast</li>
+</ul>
+
+<h3 id="exceptional-value-states">Exceptional Value States</h3>
+<p>Great for budget-conscious projects:</p>
+<ul>
+  <li><strong>Arkansas</strong>: $2.50 - lowest cost in nation</li>
+  <li><strong>Idaho</strong>: $20 - online form, CSV email</li>
+  <li><strong>Michigan</strong>: $23-$50 - FOIA request</li>
+  <li><strong>Missouri</strong>: ~$35 - Sunshine Law request</li>
+  <li><strong>Virginia</strong>: ~$57 for statewide ($9.50/million) - but requires eligibility</li>
+</ul>
+
+<h3 id="states-with-unique-features">States with Unique Features</h3>
+<ul>
+  <li><strong>Nebraska</strong>: $500 with one year of free monthly updates</li>
+  <li><strong>Rhode Island</strong>: $25 with 3 free updates included</li>
+  <li><strong>South Dakota</strong>: Price reduced from $2,500 to $225 in September 2025</li>
+  <li><strong>Illinois</strong>: 15 elections of voter history; political committees only</li>
+</ul>
+
+<h3 id="states-with-access-restrictions">States with Access Restrictions</h3>
+<ul>
+  <li><strong>Oklahoma</strong>: Free but must be OK resident or qualified entity</li>
+  <li><strong>Minnesota</strong>: $46 but must be registered MN voter</li>
+  <li><strong>South Carolina</strong>: $2,500 but must be registered SC voter</li>
+  <li><strong>Virginia</strong>: ~$57 but must be candidate/party/PAC</li>
+  <li><strong>California</strong>: $100 but must be “qualified applicant”</li>
+  <li><strong>Illinois</strong>: $500 but must be political committee</li>
+</ul>
+
+<h3 id="states-to-avoid-unless-essential">States to Avoid Unless Essential</h3>
+<ul>
+  <li><strong>Massachusetts</strong>: No statewide list; must contact all 351 municipalities individually</li>
+  <li><strong>Alabama</strong>: ~$37,000 due to $0.01 per voter pricing with no cap</li>
+  <li><strong>Nevada</strong>: ~$20,000 due to $0.01 per voter pricing</li>
+  <li><strong>Wisconsin</strong>: ~$12,500 for complete statewide list</li>
+  <li><strong>Hawaii</strong>: Must contact all 4 counties separately</li>
+</ul>
+
+<h3 id="public-records-request-states">Public Records Request States</h3>
+<p>These states use FOIA/open records processes rather than dedicated voter data programs:</p>
+<ul>
+  <li><strong>Michigan</strong>: FOIA ($23-$50)</li>
+  <li><strong>Missouri</strong>: Sunshine Law (~$35)</li>
+  <li><strong>New York</strong>: FOIL (free/minimal)</li>
+  <li><strong>New Jersey</strong>: OPRA (~$375)</li>
+  <li><strong>Arizona</strong>: Public records request (~$516)</li>
+</ul>
+
+<h2 id="future-maintenance">Future Maintenance</h2>
+
+<h3 id="regular-updates-needed">Regular Updates Needed</h3>
+<ul>
+  <li><strong>Cost verification</strong>: Prices may change; verify periodically with state offices</li>
+  <li><strong>Process changes</strong>: States may update request procedures, forms, or portals</li>
+  <li><strong>Testing status</strong>: Update as more states are tested</li>
+  <li><strong>New legislation</strong>: Monitor for law changes affecting voter data access</li>
+</ul>
+
+<h3 id="potential-additions">Potential Additions</h3>
+<ul>
+  <li>Add “Last Verified” dates to each state page</li>
+  <li>Include sample request letters/forms</li>
+  <li>Add state-by-state legal restrictions comparisons</li>
+  <li>Document voter history field structures for each state</li>
+  <li>Add delivery timeline tracking (actual vs. estimated)</li>
+</ul>
+
+<h3 id="seo-considerations">SEO Considerations</h3>
+<ul>
+  <li>Each state page targets: “[State] voter data”, “[State] voter list”, “[State] voter history”</li>
+  <li>Overview page targets: “voter data by state”, “how to get voter lists”</li>
+  <li>Consider adding FAQ page for common questions</li>
+  <li>Add state maps/visualizations showing cost tiers</li>
+</ul>
+
+<h2 id="quick-links-for-user">Quick Links for User</h2>
+
+<ul>
+  <li><strong>Blog Index</strong>: <code class="language-plaintext highlighter-rouge">/blog/</code></li>
+  <li><strong>States Overview</strong>: <code class="language-plaintext highlighter-rouge">/states-overview.html</code></li>
+  <li><strong>Individual State</strong>: <code class="language-plaintext highlighter-rouge">/blog/2025/11/17/[state-name]-voter-data.html</code></li>
+  <li><strong>Example</strong>: <code class="language-plaintext highlighter-rouge">/blog/2025/11/17/ohio-voter-data.html</code></li>
+</ul>
+
+
+      <footer class="site-footer">
+        
+          <span class="site-footer-owner"><a href="https://github.com/urnicus/urnicus">urnicus</a> is maintained by <a href="https://github.com/urnicus">urnicus</a>.</span>
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

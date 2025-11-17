@@ -209,25 +209,51 @@ A comprehensive landing page featuring:
 - Posts must not have future dates (relative to server time) unless `future: true` is set in config
 - The `github-pages` gem in the Gemfile ensures compatibility with GitHub Pages deployment
 
-## Navigation Structure
+## Notable State Characteristics
 
-The site has three main content areas:
+### Free Access States
+Best for initial research and testing:
+- **Ohio**: Instant FTP download, easiest access
+- **North Carolina**: Weekly updates, 10-year voter history
+- **Pennsylvania**: 40 elections of voter history (most comprehensive)
+- **Washington**: Email link in minutes, very fast
 
-1. **Individual State Blog Posts** (`_posts/` directory)
-   - One detailed post per state (50 total)
-   - URL format: `/blog/2025/11/17/[state-name]-voter-data.html`
-   - Each follows the standard blog post structure outlined above
+### Exceptional Value States
+Great for budget-conscious projects:
+- **Arkansas**: $2.50 - lowest cost in nation
+- **Idaho**: $20 - online form, CSV email
+- **Michigan**: $23-$50 - FOIA request
+- **Missouri**: ~$35 - Sunshine Law request
+- **Virginia**: ~$57 for statewide ($9.50/million) - but requires eligibility
 
-2. **Blog Index** (`blog.md`)
-   - Lists all state blog posts
-   - URL: `/blog/`
+### States with Unique Features
+- **Nebraska**: $500 with one year of free monthly updates
+- **Rhode Island**: $25 with 3 free updates included
+- **South Dakota**: Price reduced from $2,500 to $225 in September 2025
+- **Illinois**: 15 elections of voter history; political committees only
 
-3. **States Overview Page** (`states-overview.md`)
-   - Sortable table comparing all 50 states
-   - States organized by cost and accessibility categories
-   - Quick reference for decision-making
-   - URL: `/states-overview.html`
-   - This is the recommended landing page for users wanting to compare states
+### States with Access Restrictions
+- **Oklahoma**: Free but must be OK resident or qualified entity
+- **Minnesota**: $46 but must be registered MN voter
+- **South Carolina**: $2,500 but must be registered SC voter
+- **Virginia**: ~$57 but must be candidate/party/PAC
+- **California**: $100 but must be "qualified applicant"
+- **Illinois**: $500 but must be political committee
+
+### States to Avoid Unless Essential
+- **Massachusetts**: No statewide list; must contact all 351 municipalities individually
+- **Alabama**: ~$37,000 due to $0.01 per voter pricing with no cap
+- **Nevada**: ~$20,000 due to $0.01 per voter pricing
+- **Wisconsin**: ~$12,500 for complete statewide list
+- **Hawaii**: Must contact all 4 counties separately
+
+### Public Records Request States
+These states use FOIA/open records processes rather than dedicated voter data programs:
+- **Michigan**: FOIA ($23-$50)
+- **Missouri**: Sunshine Law (~$35)
+- **New York**: FOIL (free/minimal)
+- **New Jersey**: OPRA (~$375)
+- **Arizona**: Public records request (~$516)
 
 ## Future Maintenance
 
