@@ -84,4 +84,59 @@ This research was compiled by exploring how all 50 states make their voter regis
 
 ---
 
+## State-by-State Details
+
+{% include states/alabama.md %}
+{% include states/alaska.md %}
+{% include states/arizona.md %}
+{% include states/arkansas.md %}
+{% include states/california.md %}
+{% include states/colorado.md %}
+{% include states/connecticut.md %}
+{% include states/delaware.md %}
+{% include states/florida.md %}
+{% include states/georgia.md %}
+{% include states/hawaii.md %}
+{% include states/idaho.md %}
+{% include states/illinois.md %}
+{% include states/indiana.md %}
+{% include states/iowa.md %}
+{% include states/kansas.md %}
+{% include states/kentucky.md %}
+{% include states/louisiana.md %}
+{% include states/maine.md %}
+{% include states/maryland.md %}
+{% include states/massachusetts.md %}
+{% include states/michigan.md %}
+{% include states/minnesota.md %}
+{% include states/mississippi.md %}
+{% include states/missouri.md %}
+{% include states/montana.md %}
+{% include states/nebraska.md %}
+{% include states/nevada.md %}
+{% include states/new-hampshire.md %}
+{% include states/new-jersey.md %}
+{% include states/new-mexico.md %}
+{% include states/new-york.md %}
+{% include states/north-carolina.md %}
+{% include states/north-dakota.md %}
+{% include states/ohio.md %}
+{% include states/oklahoma.md %}
+{% include states/oregon.md %}
+{% include states/pennsylvania.md %}
+{% include states/rhode-island.md %}
+{% include states/south-carolina.md %}
+{% include states/south-dakota.md %}
+{% include states/tennessee.md %}
+{% include states/texas.md %}
+{% include states/utah.md %}
+{% include states/vermont.md %}
+{% include states/virginia.md %}
+{% include states/washington.md %}
+{% include states/west-virginia.md %}
+{% include states/wisconsin.md %}
+{% include states/wyoming.md %}
+
+---
+
 *Last updated: November 21, 2025*
