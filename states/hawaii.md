@@ -11,7 +11,9 @@ permalink: /states/hawaii/
 
 # Hawaii
 
-**Untested | Access: Contact Election Offices | Expense: ?**
+| Status | Access | Expense |
+|:-------|:-------|:--------|
+| Untested | Contact Election Offices | ? |
 
 **Voter List Access**
 

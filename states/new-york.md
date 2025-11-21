@@ -11,7 +11,9 @@ permalink: /states/new-york/
 
 # New York
 
-**Untested | Access: Leg Work (FOIL) | Expense: $**
+| Status | Access | Expense |
+|:-------|:-------|:--------|
+| Untested | Leg Work (FOIL) | $ |
 
 **Voter List Access**
 

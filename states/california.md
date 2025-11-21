@@ -11,7 +11,9 @@ permalink: /states/california/
 
 # California
 
-**Untested | Access: Mail in | Expense: $**
+| Status | Access | Expense |
+|:-------|:-------|:--------|
+| Untested | Mail in | $ |
 
 **Voter List Access**
 

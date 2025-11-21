@@ -11,7 +11,9 @@ permalink: /states/nevada/
 
 # Nevada
 
-**Untested | Access: Online/Mail in | Expense: $$$**
+| Status | Access | Expense |
+|:-------|:-------|:--------|
+| Untested | Online/Mail in | $$$ |
 
 **Voter List Access**
 

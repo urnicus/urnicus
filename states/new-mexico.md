@@ -11,7 +11,9 @@ permalink: /states/new-mexico/
 
 # New Mexico
 
-**Untested | Access: Email | Expense: $$$**
+| Status | Access | Expense |
+|:-------|:-------|:--------|
+| Untested | Email | $$$ |
 
 **Voter List Access**
 

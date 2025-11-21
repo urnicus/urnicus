@@ -11,7 +11,9 @@ permalink: /states/new-jersey/
 
 # New Jersey
 
-**Untested | Access: Open Records | Expense: $$**
+| Status | Access | Expense |
+|:-------|:-------|:--------|
+| Untested | Open Records | $$ |
 
 **Voter List Access**
 

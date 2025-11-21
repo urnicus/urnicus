@@ -11,7 +11,9 @@ permalink: /states/washington/
 
 # Washington
 
-**Tested | Access: Online | Expense: FREE**
+| Status | Access | Expense |
+|:-------|:-------|:--------|
+| Tested | Online | FREE |
 
 **Voter List Access**
 

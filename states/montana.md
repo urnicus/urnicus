@@ -11,7 +11,9 @@ permalink: /states/montana/
 
 # Montana
 
-**Untested | Access: Online | Expense: $$$**
+| Status | Access | Expense |
+|:-------|:-------|:--------|
+| Untested | Online | $$$ |
 
 **Voter List Access**
 

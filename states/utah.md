@@ -11,7 +11,9 @@ permalink: /states/utah/
 
 # Utah
 
-**Untested | Access: Online | Expense: $$$**
+| Status | Access | Expense |
+|:-------|:-------|:--------|
+| Untested | Online | $$$ |
 
 **Voter List Access**
 

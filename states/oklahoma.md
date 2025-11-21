@@ -11,7 +11,9 @@ permalink: /states/oklahoma/
 
 # Oklahoma
 
-**Untested | Access: Email | Expense: FREE**
+| Status | Access | Expense |
+|:-------|:-------|:--------|
+| Untested | Email | FREE |
 
 **Voter List Access**
 

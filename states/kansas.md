@@ -11,7 +11,9 @@ permalink: /states/kansas/
 
 # Kansas
 
-**Untested | Access: Mail in | Expense: $$**
+| Status | Access | Expense |
+|:-------|:-------|:--------|
+| Untested | Mail in | $$ |
 
 **Voter List Access**
 

@@ -11,7 +11,9 @@ permalink: /states/virginia/
 
 # Virginia
 
-**Untested | Access: Email | Expense: $**
+| Status | Access | Expense |
+|:-------|:-------|:--------|
+| Untested | Email | $ |
 
 **Voter List Access**
 

@@ -11,7 +11,9 @@ permalink: /states/georgia/
 
 # Georgia
 
-**Tested | Access: Online | Expense: $$**
+| Status | Access | Expense |
+|:-------|:-------|:--------|
+| Tested | Online | $$ |
 
 **Voter List Access**
 

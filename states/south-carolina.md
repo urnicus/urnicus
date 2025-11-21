@@ -11,7 +11,9 @@ permalink: /states/south-carolina/
 
 # South Carolina
 
-**Untested | Access: Online | Expense: $$$**
+| Status | Access | Expense |
+|:-------|:-------|:--------|
+| Untested | Online | $$$ |
 
 **Voter List Access**
 

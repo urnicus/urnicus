@@ -11,7 +11,9 @@ permalink: /states/north-dakota/
 
 # North Dakota
 
-**Untested | Access: Contact Election Offices | Expense: ?**
+| Status | Access | Expense |
+|:-------|:-------|:--------|
+| Untested | Contact Election Offices | ? |
 
 **Voter List Access**
 

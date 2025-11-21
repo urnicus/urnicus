@@ -11,7 +11,9 @@ permalink: /states/connecticut/
 
 # Connecticut
 
-**Untested | Access: Email/Mail in | Expense: $$**
+| Status | Access | Expense |
+|:-------|:-------|:--------|
+| Untested | Email/Mail in | $$ |
 
 **Voter List Access**
 

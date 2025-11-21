@@ -11,7 +11,9 @@ permalink: /states/florida/
 
 # Florida
 
-**Pending | Access: Email | Expense: FREE**
+| Status | Access | Expense |
+|:-------|:-------|:--------|
+| Pending | Email | FREE |
 
 **Voter List Access**
 
