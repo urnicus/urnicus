@@ -6,9 +6,9 @@ permalink: /states-overview/
 
 # State Voter Data Access Overview
 
-A comprehensive guide to obtaining voter registration lists and voter history data across all 50 U.S. states. Below you'll find a sortable table comparing access methods, costs, and testing status for each state.
+My comprehensive notes for obtaining voter registration lists and voter history data across all 50 U.S. states.
 
-The costs quoted below are for statewide lists. Local jurisdictions are typically much less expensive. If you have questions about your local jurisdiction, contact your local election office.
+The costs quoted below are for statewide lists. Local jurisdictions are typically much less expensive. If you have questions about your local jurisdiction, contact your local election office or Secratary of State's office.  I have always had a pleasant and helpful interaction.
 
 {% include key.html %}
 
@@ -69,51 +69,6 @@ Click column headers to sort.
 | [Wisconsin](/states/wisconsin/) | Relatively Expensive | Online | $$$ | Untested |
 | [Wyoming](/states/wyoming/) | Barriers | Email/Mail in | $ | Untested |
 
-## Key Insights
-
-### Best Values (Free Access)
-- **Ohio** - Free, online, immediate download
-- **North Carolina** - Free, online, updated weekly, 10-year history
-- **Mississippi** - Free, weekly email distribution
-- **Washington** - Free, online, immediate
-- **Vermont** - Free via email
-- **Florida** - Free via email (monthly updates)
-
-### Fastest Access
-States with immediate online downloads:
-- Ohio
-- Pennsylvania ($20)
-- Washington (Free)
-
-### Most Expensive
-- **Alabama** - ~$37,000 ($0.01 per record)
-- **Nevada** - ~$20,000 ($0.01 per name)
-- **Wisconsin** - ~$12,500
-
-### Best Voter History Coverage
-- **North Carolina** - 10 years, updated weekly
-- **Pennsylvania** - 40 elections included
-- **Kentucky** - 5 years included
-
-## Categories
-
-### Tested & Verified (6 states)
-States where the process has been personally tested:
-- Florida, Georgia, Mississippi, North Carolina, Ohio, Pennsylvania, Washington
-
-### Free & Unrestricted Access (7 states)
-- Florida, Mississippi, North Carolina, Ohio, Vermont, Washington, New York
-
-### Low Cost Access $1-$199 (Multiple states)
-- Arkansas ($2.50), Delaware ($25), Pennsylvania ($20), Rhode Island ($25), and many others
-
-### Requires Leg Work
-States requiring open records requests or direct contact with election offices:
-- Alaska, Arizona, Hawaii, Massachusetts, Michigan, Missouri, New Hampshire, New Jersey, New York, North Dakota, Texas
-
-### Access Restrictions
-States with eligibility requirements:
-- California, Illinois, Indiana, Maine, Minnesota, Oklahoma, South Carolina, Virginia, Wyoming
 
 ## Research Background
 
