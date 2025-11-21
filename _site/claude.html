@@ -10,14 +10,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Voter Data Access Guide" />
 <meta property="og:description" content="Voter Data Access Guide" />
-<link rel="canonical" href="http://localhost:4000/claude" />
-<meta property="og:url" content="http://localhost:4000/claude" />
+<link rel="canonical" href="http://localhost:4000/claude.html" />
+<meta property="og:url" content="http://localhost:4000/claude.html" />
 <meta property="og:site_name" content="Urnicus Inc." />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Urnicus Voter Data Blog - Project Documentation" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Voter Data Access Guide","headline":"Urnicus Voter Data Blog - Project Documentation","url":"http://localhost:4000/claude"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"Voter Data Access Guide","headline":"Urnicus Voter Data Blog - Project Documentation","url":"http://localhost:4000/claude.html"}</script>
 <!-- End Jekyll SEO tag -->
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -25,7 +25,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="stylesheet" href="/assets/css/style.css?v=c73ac5a3398c4bc43d69788f574c6fae3a07ea41">
+    <link rel="stylesheet" href="/assets/css/style.css?v=b6f0e177e1363bca56912c3d3aaae4e419b14264">
     <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
 
 <!-- Setup Google Analytics -->
@@ -279,63 +279,34 @@ git push
   <li>The <code class="language-plaintext highlighter-rouge">github-pages</code> gem in the Gemfile ensures compatibility with GitHub Pages deployment</li>
 </ul>
 
-<h2 id="notable-state-characteristics">Notable State Characteristics</h2>
+<h2 id="navigation-structure">Navigation Structure</h2>
 
-<h3 id="free-access-states">Free Access States</h3>
-<p>Best for initial research and testing:</p>
-<ul>
-  <li><strong>Ohio</strong>: Instant FTP download, easiest access</li>
-  <li><strong>North Carolina</strong>: Weekly updates, 10-year voter history</li>
-  <li><strong>Pennsylvania</strong>: 40 elections of voter history (most comprehensive)</li>
-  <li><strong>Washington</strong>: Email link in minutes, very fast</li>
-</ul>
+<p>The site has three main content areas:</p>
 
-<h3 id="exceptional-value-states">Exceptional Value States</h3>
-<p>Great for budget-conscious projects:</p>
-<ul>
-  <li><strong>Arkansas</strong>: $2.50 - lowest cost in nation</li>
-  <li><strong>Idaho</strong>: $20 - online form, CSV email</li>
-  <li><strong>Michigan</strong>: $23-$50 - FOIA request</li>
-  <li><strong>Missouri</strong>: ~$35 - Sunshine Law request</li>
-  <li><strong>Virginia</strong>: ~$57 for statewide ($9.50/million) - but requires eligibility</li>
-</ul>
-
-<h3 id="states-with-unique-features">States with Unique Features</h3>
-<ul>
-  <li><strong>Nebraska</strong>: $500 with one year of free monthly updates</li>
-  <li><strong>Rhode Island</strong>: $25 with 3 free updates included</li>
-  <li><strong>South Dakota</strong>: Price reduced from $2,500 to $225 in September 2025</li>
-  <li><strong>Illinois</strong>: 15 elections of voter history; political committees only</li>
-</ul>
-
-<h3 id="states-with-access-restrictions">States with Access Restrictions</h3>
-<ul>
-  <li><strong>Oklahoma</strong>: Free but must be OK resident or qualified entity</li>
-  <li><strong>Minnesota</strong>: $46 but must be registered MN voter</li>
-  <li><strong>South Carolina</strong>: $2,500 but must be registered SC voter</li>
-  <li><strong>Virginia</strong>: ~$57 but must be candidate/party/PAC</li>
-  <li><strong>California</strong>: $100 but must be “qualified applicant”</li>
-  <li><strong>Illinois</strong>: $500 but must be political committee</li>
-</ul>
-
-<h3 id="states-to-avoid-unless-essential">States to Avoid Unless Essential</h3>
-<ul>
-  <li><strong>Massachusetts</strong>: No statewide list; must contact all 351 municipalities individually</li>
-  <li><strong>Alabama</strong>: ~$37,000 due to $0.01 per voter pricing with no cap</li>
-  <li><strong>Nevada</strong>: ~$20,000 due to $0.01 per voter pricing</li>
-  <li><strong>Wisconsin</strong>: ~$12,500 for complete statewide list</li>
-  <li><strong>Hawaii</strong>: Must contact all 4 counties separately</li>
-</ul>
-
-<h3 id="public-records-request-states">Public Records Request States</h3>
-<p>These states use FOIA/open records processes rather than dedicated voter data programs:</p>
-<ul>
-  <li><strong>Michigan</strong>: FOIA ($23-$50)</li>
-  <li><strong>Missouri</strong>: Sunshine Law (~$35)</li>
-  <li><strong>New York</strong>: FOIL (free/minimal)</li>
-  <li><strong>New Jersey</strong>: OPRA (~$375)</li>
-  <li><strong>Arizona</strong>: Public records request (~$516)</li>
-</ul>
+<ol>
+  <li><strong>Individual State Blog Posts</strong> (<code class="language-plaintext highlighter-rouge">_posts/</code> directory)
+    <ul>
+      <li>One detailed post per state (50 total)</li>
+      <li>URL format: <code class="language-plaintext highlighter-rouge">/blog/2025/11/17/[state-name]-voter-data.html</code></li>
+      <li>Each follows the standard blog post structure outlined above</li>
+    </ul>
+  </li>
+  <li><strong>Blog Index</strong> (<code class="language-plaintext highlighter-rouge">blog.md</code>)
+    <ul>
+      <li>Lists all state blog posts</li>
+      <li>URL: <code class="language-plaintext highlighter-rouge">/blog/</code></li>
+    </ul>
+  </li>
+  <li><strong>States Overview Page</strong> (<code class="language-plaintext highlighter-rouge">states-overview.md</code>)
+    <ul>
+      <li>Sortable table comparing all 50 states</li>
+      <li>States organized by cost and accessibility categories</li>
+      <li>Quick reference for decision-making</li>
+      <li>URL: <code class="language-plaintext highlighter-rouge">/states-overview.html</code></li>
+      <li>This is the recommended landing page for users wanting to compare states</li>
+    </ul>
+  </li>
+</ol>
 
 <h2 id="future-maintenance">Future Maintenance</h2>
 

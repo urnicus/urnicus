@@ -1,7 +1,3 @@
 theme: jekyll-theme-cayman
 title: Urnicus Inc.
 description: Voter Data Access Guide
-
-# Blog configuration
-future: true
-permalink: /blog/:year/:month/:day/:title.html
