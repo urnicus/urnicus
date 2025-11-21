@@ -1,36 +1,38 @@
-# Urnicus Voter Data Blog - Project Documentation
+# Urnicus Voter Data Guide - Project Documentation
 
 ## Project Overview
 
-This is a Jekyll-based blog hosted on GitHub Pages that provides state-by-state information on how to obtain voter registration lists and voter history data across the United States.
+This is a Jekyll-based site hosted on GitHub Pages that provides state-by-state information on how to obtain voter registration lists and voter history data across the United States.
 
 **Live URL**: https://urnicus.com/
-**Blog URL**: https://urnicus.com/blog/
 
 ## Project Structure
 
 ```
 urnicus/
 ├── _config.yml              # Jekyll configuration
-├── _layouts/                # Custom layouts
-│   └── post.html           # Blog post layout template
-├── _posts/                 # Blog posts (Markdown files) - 50 state posts
-│   ├── 2025-11-17-alabama-voter-data.md
-│   ├── 2025-11-17-alaska-voter-data.md
-│   ├── ... (all 50 states)
-│   └── 2025-11-17-wyoming-voter-data.md
-├── blog.md                 # Blog index page (lists all posts)
-├── states-overview.md      # Overview page with sortable table and categories
-├── README.md               # Project README
-├── Gemfile                 # Ruby dependencies
-└── CLAUDE.md               # This file - project documentation for Claude
+├── _includes/               # Reusable partials
+│   ├── key.html            # Key/legend for state categories
+│   └── states/             # Individual state content partials (50 files)
+│       ├── alabama.md
+│       ├── alaska.md
+│       └── ... (all 50 states)
+├── states/                  # Individual state pages (50 files)
+│   ├── alabama.md
+│   ├── alaska.md
+│   └── ... (all 50 states)
+├── index.md                 # Home page
+├── states-overview.md       # Comprehensive overview with table + all state details
+├── README.md                # Project README
+├── Gemfile                  # Ruby dependencies
+└── CLAUDE.md                # This file - project documentation for Claude
 ```
 
 ## Theme
 
 **Current Theme**: `jekyll-theme-cayman`
 
-The Cayman theme provides a clean, centered layout that works well for blog content. Previously used `jekyll-theme-minimal` which had sidebar formatting issues with blog posts.
+The Cayman theme provides a clean, centered layout that works well for documentation content.
 
 ## Configuration Details
 
@@ -39,102 +41,92 @@ The Cayman theme provides a clean, centered layout that works well for blog cont
 - **Theme**: `jekyll-theme-cayman`
 - **Title**: `Urnicus Inc.`
 - **Description**: `Voter Data Access Guide`
-- **Future Posts**: `future: true` (allows posts with today's/future dates to display)
-- **Permalink Structure**: `/blog/:year/:month/:day/:title.html`
 
-### Blog Post Format
+### State Page Format
 
-All blog posts must follow this naming convention:
+All state pages are in the `states/` directory with simple naming:
 ```
-YYYY-MM-DD-state-name-voter-data.md
+states/ohio.md
+states/pennsylvania.md
+states/north-carolina.md
 ```
 
-Example: `2025-11-17-pennsylvania-voter-data.md`
-
-### Blog Post Template (Front Matter)
+### State Page Template (Front Matter)
 
 ```yaml
 ---
-layout: post
-title: "How to Get Voter Data in [State Name]"
-date: YYYY-MM-DD
-tags: [state-name, voter-data, voter-list, voter-history]
+layout: default
+title: "[State] Voter Data"
+state: "[State]"
+status: "Tested/Pending/Untested"
+access_method: "Online/Email/Mail in/etc"
+cost: "FREE/$/$$/$$$"
+category: "Accessible/Barriers/Leg Work/Relatively Expensive"
+permalink: /states/[state-slug]/
 ---
 ```
 
-## Blog Post Structure
+## State Page Structure
 
-Each state blog post should follow this structure:
+Each state page follows this simple structure:
 
-1. **Introduction** - Brief overview of the state's voter data accessibility
-2. **Quick Summary Table** - Key facts including:
-   - Statewide Cost
-   - Voter List Access
-   - Voter History Access
-   - Delivery Method
-   - Processing Time
-3. **Voter List Section** - How to access, what's included, step-by-step instructions
-4. **Voter History Section** - Historical coverage, what's included
-5. **Cost Section** - Detailed pricing information
-6. **Restrictions and Permitted Uses** - Legal requirements (use blockquotes for important restrictions)
-7. **Technical Notes** (if applicable) - Browser compatibility, file formats, etc.
-8. **Additional Resources** - Links to official documentation
+1. **Status Table** - Clean 3-column table with Status, Access, Expense
+2. **Voter List Access** - Links and basic instructions
+3. **Voter History** - What's included
+4. **Cost** - Pricing details
+5. **Key Legend** - Included via `{% include key.html %}`
+6. **Last Updated** - Timestamp
+
+Example:
+```markdown
+# Ohio
+
+| Status | Access | Expense |
+|:-------|:-------|:--------|
+| Tested | Online | FREE |
+
+**Voter List Access**
+
+[Link to portal]
+
+Brief description
+
+**Voter History**
+
+Brief description
+
+**Cost**
+
+Cost details
+
+---
+
+{% include key.html %}
+
+*Last updated: November 21, 2025*
+```
 
 ## States Completed
 
-All 50 states have been completed as of November 17, 2025:
+All 50 states completed as of November 21, 2025:
 
-- [x] Alabama
-- [x] Alaska
-- [x] Arizona
-- [x] Arkansas
-- [x] California
-- [x] Colorado
-- [x] Connecticut
-- [x] Delaware
-- [x] Florida (Tested)
-- [x] Georgia (Tested)
-- [x] Hawaii
-- [x] Idaho
-- [x] Illinois
-- [x] Indiana
-- [x] Iowa
-- [x] Kansas
-- [x] Kentucky
-- [x] Louisiana
-- [x] Maine
-- [x] Maryland
-- [x] Massachusetts
-- [x] Michigan
-- [x] Minnesota
-- [x] Mississippi (Submitted for testing)
-- [x] Missouri
-- [x] Montana
-- [x] Nebraska
-- [x] Nevada
-- [x] New Hampshire
-- [x] New Jersey
-- [x] New Mexico
-- [x] New York
-- [x] North Carolina (Tested)
-- [x] Ohio (Tested)
-- [x] Oklahoma
-- [x] Oregon
-- [x] Pennsylvania (Tested)
-- [x] Rhode Island
-- [x] South Carolina
-- [x] South Dakota
-- [x] Tennessee
-- [x] Texas
-- [x] Utah
-- [x] Vermont
-- [x] Virginia
-- [x] Washington (Tested)
-- [x] West Virginia
-- [x] Wisconsin
-- [x] Wyoming
+- [x] Alabama - [x] Alaska - [x] Arizona - [x] Arkansas
+- [x] California - [x] Colorado - [x] Connecticut - [x] Delaware
+- [x] Florida (Pending) - [x] Georgia (Tested)
+- [x] Hawaii - [x] Idaho - [x] Illinois - [x] Indiana - [x] Iowa
+- [x] Kansas - [x] Kentucky - [x] Louisiana
+- [x] Maine - [x] Maryland - [x] Massachusetts - [x] Michigan - [x] Minnesota
+- [x] Mississippi (Tested) - [x] Missouri - [x] Montana
+- [x] Nebraska - [x] Nevada - [x] New Hampshire - [x] New Jersey
+- [x] New Mexico - [x] New York - [x] North Carolina (Tested) - [x] North Dakota
+- [x] Ohio (Tested) - [x] Oklahoma - [x] Oregon
+- [x] Pennsylvania (Tested) - [x] Rhode Island
+- [x] South Carolina - [x] South Dakota
+- [x] Tennessee - [x] Texas - [x] Utah
+- [x] Vermont - [x] Virginia - [x] Washington (Tested)
+- [x] West Virginia - [x] Wisconsin - [x] Wyoming
 
-**Note:** North Dakota was not included as it does not have voter registration (same-day registration state)
+**Note:** North Dakota included but has no voter registration (same-day registration state)
 
 ## Local Development
 
@@ -158,76 +150,64 @@ git push
 
 GitHub Pages will build and deploy the site automatically (usually within 1-2 minutes).
 
-## Source Data
-
-All state research data is available in the original research document provided by the user. Each state entry includes:
-- Voter List access method
-- Voter History access method
-- Cost information
-- Restrictions on use
-- Testing status
-- Direct links to request forms/portals
-
-## States Overview Page
-
-**Location**: `/states-overview.html` (from `states-overview.md`)
-
-A comprehensive landing page featuring:
-- **Sortable Table**: Click column headers to sort by State, Cost, Effort, or Tested status
-- **Categorized Sections**: States grouped by access type and cost
-  - Tested & Verified (6 states)
-  - Free & Unrestricted Access (7 states)
-  - Extremely Low Cost $0-$50 (9 states)
-  - Free/Low Cost with Eligibility Requirements (3 states)
-  - Moderate Cost $100-$500 (14 states)
-  - Higher Cost $1,000-$5,000 (11 states)
-  - Very High Cost or Complex $5,000+ (6 states)
-- **Key Insights**: Best values, fastest access, best voter history coverage
-- **Practical Guidance**: Recommendations for different user types
-
 ## Content Statistics
 
-- **Total States**: 50 (49 + Pennsylvania original)
-- **Total Blog Posts**: 50
+- **Total States**: 50
 - **States Tested**: 6 (Ohio, North Carolina, Pennsylvania, Florida, Georgia, Washington)
 - **States Pending Test**: 1 (Mississippi - form submitted)
-- **Free Access States**: 7 (Ohio, North Carolina, Florida, Mississippi, Vermont, Washington, New York)
+- **Free Access States**: 7 (Ohio, North Carolina, Florida, Mississippi, Vermont, Washington, Oklahoma)
 - **Lowest Cost**: Arkansas ($2.50)
 - **Highest Cost**: Alabama (~$37,000)
 - **Most Complex**: Massachusetts (no statewide list - 351 municipalities)
 
 ## Key Design Decisions
 
-- **Theme Choice**: Cayman theme selected for clean, centered layout suitable for long-form blog content
-- **Permalink Structure**: Posts organized under `/blog/` path to keep blog content separate from potential other pages
-- **Future Posts Enabled**: Allows posts dated today or in the future to display immediately
-- **Post Layout**: Custom `_layouts/post.html` created with styling for tables, blockquotes, and navigation back to blog index
+- **Simplified Structure**: No date-based permalinks, direct `/states/ohio/` URLs
+- **Single Source of Truth**: State content in `_includes/states/` can be reused
+- **Table Format**: Clean Status/Access/Expense table instead of bold text
+- **Jekyll Includes**: Reusable partials for key and state content
+- **Comprehensive Overview**: One page with both comparison table and full details
 
 ## Important Notes
 
 - Jekyll only reads `_config.yml` at startup - server must be restarted after configuration changes
-- Posts must not have future dates (relative to server time) unless `future: true` is set in config
 - The `github-pages` gem in the Gemfile ensures compatibility with GitHub Pages deployment
+- State include files (`_includes/states/`) are the source of truth and can be included in multiple places
 
 ## Navigation Structure
 
-The site has three main content areas:
+The site has three main areas:
 
-1. **Individual State Blog Posts** (`_posts/` directory)
-   - One detailed post per state (50 total)
-   - URL format: `/blog/2025/11/17/[state-name]-voter-data.html`
-   - Each follows the standard blog post structure outlined above
+1. **Home Page** (`index.md`)
+   - Welcome message
+   - Links to states overview
+   - URL: `/`
 
-2. **Blog Index** (`blog.md`)
-   - Lists all state blog posts
-   - URL: `/blog/`
+2. **States Overview** (`states-overview.md`)
+   - Comparison table with all 50 states (sortable, with clickable state links)
+   - Key legend
+   - Full details for all 50 states (via includes)
+   - URL: `/states-overview/`
+   - **This is the main resource page**
 
-3. **States Overview Page** (`states-overview.md`)
-   - Sortable table comparing all 50 states
-   - States organized by cost and accessibility categories
-   - Quick reference for decision-making
-   - URL: `/states-overview.html`
-   - This is the recommended landing page for users wanting to compare states
+3. **Individual State Pages** (`states/` directory)
+   - One page per state (50 total)
+   - URL format: `/states/[state-name]/`
+   - Examples: `/states/ohio/`, `/states/pennsylvania/`
+
+## Jekyll Includes System
+
+We use Jekyll includes for reusable content:
+
+### `_includes/key.html`
+The key/legend explaining state categories and cost symbols. Included at bottom of each state page.
+
+### `_includes/states/[state].md`
+Each state's content (extracted from the main state page). These can be included anywhere, currently used in:
+- Individual state pages (the source)
+- States overview page (shows all 50 states in one place)
+
+To include: `{% include states/ohio.md %}`
 
 ## Future Maintenance
 
@@ -250,9 +230,26 @@ The site has three main content areas:
 - Consider adding FAQ page for common questions
 - Add state maps/visualizations showing cost tiers
 
-## Quick Links for User
+## Quick Links
 
-- **Blog Index**: `/blog/`
-- **States Overview**: `/states-overview.html`
-- **Individual State**: `/blog/2025/11/17/[state-name]-voter-data.html`
-- **Example**: `/blog/2025/11/17/ohio-voter-data.html`
+- **Home**: `/`
+- **States Overview**: `/states-overview/`
+- **Individual State**: `/states/[state-name]/`
+- **Examples**: `/states/ohio/`, `/states/north-carolina/`, `/states/pennsylvania/`
+
+## Adding/Updating State Information
+
+To update a state's information:
+
+1. Edit the state file: `states/[state-name].md`
+2. The changes will automatically update:
+   - The individual state page at `/states/[state-name]/`
+   - The states overview page (if you regenerate includes)
+
+To regenerate the include files after editing a state page:
+```bash
+for state in states/*.md; do
+  state_name=$(basename "$state" .md)
+  awk '/^---$/{f++; next} f==2' "$state" > "_includes/states/${state_name}.md"
+done
+```
